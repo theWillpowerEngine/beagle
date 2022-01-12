@@ -1,0 +1,36 @@
+{
+  "name": "beagle",
+  "version": "0.0.1",
+  "description": "BGL3 Beagle Simulator",
+  "main": "index.js",
+  "author": "Dan Larsen",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-packager . beagle --platform=win32 --arch=x64 --overwrite"
+  },
+  "_moduleAliases": {
+    "@": "./src",
+    "@libs": "./res/libs"
+  },
+  "build": {
+    "extraResources": [
+      {
+        "from": "./res/",
+        "to": "res",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "color": "^4.2.0",
+    "ds-heightmap": "^0.2.3",
+    "electron": "^16.0.7",
+    "module-alias": "^2.2.2",
+    "pathfinding": "^0.4.18",
+    "rng": "^0.2.2"
+  }
+}
