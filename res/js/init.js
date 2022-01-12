@@ -10,5 +10,8 @@ window.onerror = function(msg, url, line, col, error) {
 }
 
 $(() => {
-    window["binds"] = require("@/binds")
+    binds.init()
+    setTimeout(() => {
+        ui.modal("Welcome to the game", () => {console.log("good")})
+    }, 250)
 })
