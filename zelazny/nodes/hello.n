@@ -10,9 +10,6 @@ It is [?light light|dark] here.  _
     add 3 to power
     add 1 to luck
     add 2 to spirit
-
-    add 10 to piloting
-    add 9 to mechanics
 }
 
 ALSO!!!
