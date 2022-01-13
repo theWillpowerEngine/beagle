@@ -17,17 +17,17 @@ body{
     width: 50%;
     height: 50%;
   
-    background-color: #211A1D;
-    color: #F8F0FB;
-    border: solid 1px #DFF2D8;
+    background-color: #020202;
+    color: #BFD7B5;
+    border: solid 1px #BFD7B5;
     padding: 3px 3px 3px 3px;
-    font-family: Helvetica, Georgia, Cochin, Times, 'Times New Roman', serif;
+    font-family: Consolas, 'Courier New', Courier, monospace;
     font-size: 13pt;
 }
 
 /*  Zelazny styles   */
 .action-link {
-    color: #5EF38C;
+    color: #006D77;
     cursor: pointer;
 }
 .default-link {
@@ -38,7 +38,7 @@ body{
 }
 .zelazny-close {
     cursor: pointer;
-    color: #D0FCB3;
+    color: #FF37A6;
 }
   
 
@@ -48,13 +48,13 @@ body{
 }
   
 .scroll::-webkit-scrollbar-track {
-    background: #7E7F83;
+    background: #BFD7B5;
 }
   
 .scroll::-webkit-scrollbar-thumb {
-    background: #B4C5E4;
+    background: #006D77;
 }
   
 .scroll::-webkit-scrollbar-thumb:hover {
-    background: #DFF2D8;
+    background: #FF37A6;
 }
