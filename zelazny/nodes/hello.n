@@ -6,6 +6,14 @@ It is [?light light|dark] here.  _
     here.|  There is a `light switch` => { the node is light } here.]    
 
 
+`cheat` => {
+    add 3 to power
+    add 1 to luck
+    add 2 to spirit
+
+    add 10 to piloting
+    add 9 to mechanics
+}
 
 ALSO!!!
 
