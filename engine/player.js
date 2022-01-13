@@ -1,4 +1,4 @@
-const xpCumulativeCosts= [1, 3, 7, 15, 27, 40, 55, 70, 90, 110]
+const xpCumulativeCosts = [1, 3, 7, 15, 27, 40, 55, 70, 90, 110] 
 
 module.exports = (engine) => {
     var player = {
@@ -6,27 +6,37 @@ module.exports = (engine) => {
             test: 0,
         },
 
+        growth: 0.1,
+        
+        capacity: 0.1,
+        control: 0.1,
+        rack: 0.1,
+
         //Aspects
-        power: 0,       powerActual: 0,
-        grace: 0,       graceActual: 0,
-        mind: 0,        mindActual: 0,
-        spirit: 0,      spiritActual: 0,
-        luck: 0,        luckActual: 0,
+        power: 0,   powerActual: 0,
+        speed: 0,   speedActual: 0,
+        mind: 0,    mindActual: 0,
+        tech: 0,    techActual: 0,
+        defense: 0, defenseActual: 0,
 
         incrementSkill(skill, amt) {
-            if(!player[skill] && player[skill] !== 0)
-                throw "Invalid skill (can't increment): " + skill
+            if(['growth', 'capacity', 'control', 'rack'].indexOf(skill) > -1) {
+                player[skill] += (amt / 100)
+            } else {
+                if(!player[skill] && player[skill] !== 0)
+                    throw "Invalid skill (can't increment): " + skill
 
-            player[skill+"Actual"] += amt
-            
-            var actual = player[skill+"Actual"]
-            var skillVal = player[skill]
+                player[skill+"Actual"] += amt
+                
+                var actual = player[skill+"Actual"]
+                var skillVal = player[skill]
 
-            while(skillVal < 10 && actual >= xpCumulativeCosts[skillVal]) {
-                skillVal += 1
+                while(skillVal < 10 && actual >= xpCumulativeCosts[skillVal]) {
+                    skillVal += 1
+                }
+
+                player[skill] = skillVal
             }
-
-            player[skill] = skillVal
 
             return skillVal
         },

@@ -10,6 +10,11 @@ It is [?light light|dark] here.  _
     add 3 to power
     add 1 to luck
     add 2 to spirit
+
+    add 1 to growth
+    add 3 to capacity
+    add 5 to control
+    add 15 to rack
 }
 
 ALSO!!!
