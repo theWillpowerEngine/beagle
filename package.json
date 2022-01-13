@@ -1,14 +1,14 @@
 {
-  "name": "beagle",
+  "name": "rwfbss",
   "version": "0.0.1",
-  "description": "BGL3 Beagle Simulator",
+  "description": "Riven World:  Fantasy-Beast Survival Simulator",
   "main": "index.js",
   "author": "Dan Larsen",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "start": "electron .",
-    "build": "npx electron-packager . beagle --platform=win32 --arch=x64 --overwrite"
+    "build": "npx electron-packager . rwfbss --platform=win32 --arch=x64 --overwrite"
   },
   "_moduleAliases": {
     "@eng": "./engine",
@@ -33,7 +33,6 @@
           "**/*"
         ]
       }
-
     ]
   },
   "dependencies": {
