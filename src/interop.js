@@ -33,7 +33,7 @@ module.exports = (win) => {
     //File System Stuff
     ipcMain.handle("zelazny", (event, topic) => {
         try {
-            var data = fs.readFileSync(rootPath + `\\zelazny\\nodes\\${topic}.n`, 'utf8')
+            var data = fs.readFileSync(rootPath + `\\zelazny\\nodes\\${topic}.z`, 'utf8')
             return data
         } catch(ex) {
             return "Zelazny '" + topic + "' was not found"

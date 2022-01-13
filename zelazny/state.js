@@ -1,4 +1,4 @@
-const skillList = ["power", "speed", "mind", "tech", "defense", 'growth', 'capacity', 'control', 'rack']
+const skillList = ["power", "speed", "mind", "tech", "defense", "sense", 'growth', 'capacity', 'control', 'rack']
 
 module.exports = (seed, eng) => {
     let engine = eng
