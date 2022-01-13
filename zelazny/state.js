@@ -1,7 +1,4 @@
-const skillList = ["airmanship", "leadership", "negotiation", "manipulation", "strength", "intellect", "luck", "reaction",
-                   "resilience", "cooking", "appraisal", "medicine", "chemistry", "larceny", "barding", "gambling", 
-                   "animals", "mining", "farming", "martialArts", "firearms", "fishing", "engineering", "divination", 
-                   "sorcery", "edge", "flashSteps", "knack", "navigation"]
+const skillList = ["skill"]
 
 module.exports = (seed, eng) => {
     let engine = eng

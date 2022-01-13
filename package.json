@@ -11,8 +11,11 @@
     "build": "npx electron-packager . beagle --platform=win32 --arch=x64 --overwrite"
   },
   "_moduleAliases": {
-    "@": "./src",
-    "@libs": "./res/libs"
+    "@eng": "./engine",
+    "@libs": "./res/libs",
+    "@src": "./src",
+    "zelazny": "./zelazny/zelazny.js",
+    "engine": "./engine/engine.js"
   },
   "build": {
     "extraResources": [
@@ -22,7 +25,15 @@
         "filter": [
           "**/*"
         ]
+      },
+      {
+        "from": "./zelazny/nodes",
+        "to": "./zelazny/nodes",
+        "filter": [
+          "**/*"
+        ]
       }
+
     ]
   },
   "dependencies": {

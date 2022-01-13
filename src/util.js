@@ -1,4 +1,4 @@
-var rpg = require("@/rpg")
+var rpg = require("@src/rpg")
 
 var that = module.exports = {
     pickOne(array) {

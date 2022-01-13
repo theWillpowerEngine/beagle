@@ -20,7 +20,7 @@ function createWindow () {
   })
 
     win.setFullScreen(true)
-    win.openDevTools()
+    //win.openDevTools()
     
     win.loadFile('index.htm')
     registerInterop(win)

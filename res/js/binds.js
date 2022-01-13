@@ -1,4 +1,3 @@
-
 const escStack = []
 
 const binds = {
@@ -12,6 +11,8 @@ const binds = {
             binds.shift = hotkeys.shift
             binds.ctrl = hotkeys.ctrl
 
+            let ipc = ipcRenderer ? ipcRenderer : "This will never happen it's just to make VS Code stop annoying me"
+
             switch(e.key.toLowerCase()) {
                 //Ignore
                 case "alt":
@@ -20,9 +21,13 @@ const binds = {
                     return
 
                 //Hard Binds
+                case "f12":
+                    await ipc.invoke("showDev")
+                    return
+
                 case "enter":
                     if(binds.alt)
-                        await ipcRenderer.invoke("toggleFullscreen")
+                        await ipc.invoke("toggleFullscreen")
                     return
 
                 case "escape":

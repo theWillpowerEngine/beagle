@@ -1,17 +1,25 @@
 const { ipcRenderer } = require("electron")
+const makeEngine = require("engine")
 
-window.onerror = function(msg, url, line, col, error) {
+window.onerror = async function(msg, url, line, col, error) {
     var extra = !col ? '' : '\ncolumn: ' + col
     extra += !error ? '' : '\nerror: ' + error
-    console.warn(extra)
+    console.warn("Global Unhandled Exception:  " + extra)
 
-    ipcRenderer.invoke("showDev")
+    await ipcRenderer.invoke("showDev")
     return false
 }
 
-$(() => {
+$(async () => {
     binds.init()
-    setTimeout(() => {
-        ui.modal("Welcome to the game", () => {console.log("good")})
+    window["game"] = makeEngine()
+
+    await game.init()
+
+    setTimeout(async () => {
+        //ui.modal("Welcome to the game", () => {console.log("good")})
+        await ui.zelazny("hello")
+    
     }, 250)
+
 })
