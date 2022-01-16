@@ -1,6 +1,23 @@
 @cg-mist
-You will be a mist dragon.
+Mist Dragons are smaller, semi-acquatic creatures which rely on concealment, illusion and poison based attacks to hunt and do battle.  They grow faster than most dragons, but aren't as physically imposing.
+
+Their powers are fairly focused and easy to pick up, and can be specialized based on you style.  In their natural environments Mist Dragons are fearsome foes.
+
+Pros:
+    -Fastest-growing dragon
+    -Focused powers and abilities which work well in their niche
+    -Elusive, evasive and tricky
+
+Cons:
+    -Weaker when outside their element or caught by surprise
+    -Low Health
+
+`Ok, sounds good` =>
 {
     start mist
     "It Begins!" game over
+}
+
+`Meh, what else is there?` => {
+    go to cg3
 }

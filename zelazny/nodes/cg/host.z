@@ -1,6 +1,21 @@
 @cg-host
-You will be a swarm host.
+Swarm Hosts are not dragons, although there are resemblances.  They look a bit like flying grubs, or perhaps fat butterflies if you want to be charitable.  They are host to a large colony of insects (which live both on and inside them), enhanced by the Dust, and they use them for scouting, hunting, attack and defense.
+
+Pros:
+    -Fast growing and slow metabolism; good for new players
+    -Flexible powerset with many passive abilities
+    -Excellent map awareness and long range
+
+Cons:
+    -Must consume a certain amount of Dust to survive
+    -Weak if caught without their swarm
+
+`Ok, sounds good` =>
 {
     start host
     "It Begins!" game over
+}
+
+`Eww gross, pick something else` => {
+    go to cg3
 }

@@ -9,7 +9,7 @@ module.exports = (engine) => {
 
         species: species.prismatic,
 
-        growth: 0.1,
+        growth: 0.1,    growthRate: 1,
         
         capacity: 0.1,
         control: 0.1,
@@ -28,7 +28,10 @@ module.exports = (engine) => {
 
         incrementSkill(skill, amt) {
             if(['growth', 'capacity', 'control', 'rack'].indexOf(skill) > -1) {
-                player[skill] += (amt / (100 + (player[skill] * 5)))
+                if(skill == "growth")
+                    player[skill] += (amt / (100 + player.growthRate + (player[skill] * 10)))
+                else
+                    player[skill] += (amt / (100 + (player[skill] * 10)))
             } else {
                 if(!player[skill] && player[skill] !== 0)
                     throw "Invalid skill (can't increment): " + skill

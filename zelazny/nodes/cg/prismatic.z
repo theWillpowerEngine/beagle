@@ -1,6 +1,23 @@
 @cg-prismatic
-You will be a prismatic.
+Prismatic Dragons are the greatest and most powerful of all the dragons (just ask them...).  Their color-coded magical abilities have unparalleled offensive power and can overwhelm most problems with force.  Where subtlety is required...  well they have pretty big claws and teeth.
+
+These big boys grow slower than anything else and have unusual power spikes based on synergies between their abilities.  Getting through their youths and into adulthood is rewarding, but challenging.
+
+Pros:
+    -Biggest dragon; vicious melee abilities and defenses
+    -Overwhelming, wide area magical attacks 
+    -Fully grown and developed they are the apex predator of the valley
+
+Cons:
+    -Slow growth, big bellies, weaker when young
+    -Powers are very strong, but specific
+
+`Ok, sounds good` =>
 {
     start prismatic
     "It Begins!" game over
+}
+
+`Too much power, what else is there?` => {
+    go to cg3
 }
