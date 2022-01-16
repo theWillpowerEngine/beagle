@@ -11,7 +11,7 @@ module.exports = () => {
             macros: {
                 load(pop, expect) {
                     try {
-                        var content = fs.readFileSync(`zelazny\\${pop()}`, 'utf8')
+                        var content = fs.readFileSync(`zelazny\\nodes\\${pop()}.z`, 'utf8')
                         eng.zelazny.parse(content, true)
                     } catch (ex) {
                         console.error(`Bad attempt to load zelazny: ` + ex)

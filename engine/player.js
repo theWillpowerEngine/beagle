@@ -28,7 +28,7 @@ module.exports = (engine) => {
 
         incrementSkill(skill, amt) {
             if(['growth', 'capacity', 'control', 'rack'].indexOf(skill) > -1) {
-                player[skill] += (amt / 100)
+                player[skill] += (amt / (100 + (player[skill] * 5)))
             } else {
                 if(!player[skill] && player[skill] !== 0)
                     throw "Invalid skill (can't increment): " + skill

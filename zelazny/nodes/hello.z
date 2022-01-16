@@ -1,22 +1,35 @@
-The valley was quiet once...  far from civilization, verdant and thriving.  Then the falling stars streaked across the sky, and the orange dust settled into cracks and crevices.  Things changed:  flora, fauna, terrain, sometimes even the rules of space and matter.  There was magic, and then, there were dragons.
+The valley was quiet once... far from civilization, verdant and thriving.  Then the falling stars streaked across the sky, and the orange dust followed.  Things changed, evolution ran wild, even the laws of nature bent to the alien dust.
 
-At first they were wise, the first intellects to behold the pristine rivers and rolling hills.  Some sought to preserve the mana from the heavens, hoarding it against some future cataclysm.  Others experimented with it, using it to fuel their own powers.  Others tried to devour it, to exterminate it from existence.  In time their arguments became battles; each side was utterly convinced of their righteousness.  The starfall and the subsequent sidereal dust came and went in cycles, and the war followed the same ebb and flow.
+In time, tiny lizards and other creatures of the valley became dragons and other beasts.  Gifted with thought, at first they were wise and there was peace and development, but in time baser instincts returned, and there was a three-sided, cataclysmic war.
 
-Then, it came to pass that the starfall did not occur on time, and the ceaseless flood of magic within the valley slowed to a mere trickle.  After centuries, the dragons ceased to be wise, devolving into cunning beasts; though ancient sorcerous powers still infused their bloodlines.  The valley became arboreal and violent and the works of the ancient ones fell into disrepair.
+The nature of the original disagreement is lost to the eons.  The starfall and the subsequent sidereal dust came and went in cycles, and the war followed the same ebb and flow.
 
-It has been an eon.  Though never quiet, the valley became almost serene in it's cycle of violent life.
+`$Continue` => {
+    go to cg2
+}
+@cg2
+Then, it came to pass that the starfall did not occur on time, and the flood of magic within the valley slowed to a trickle.  In time, the dragons ceased to be wise, devolving into cunning beasts; though ancient sorcerous powers still infused their bloodlines.  The valley became arboreal and violent and the works of the ancient ones fell into disrepair.
 
-The stars have started to streak again, and very old things in the valley have started to glow with eldritch colors.  The dust will soon fall once more, and the dragons stir as ancient species-memories churn in their lizard brains.  Perhaps the monsters will become wise once more.  Perhaps...
+It has been an age; though never quiet, the valley has become almost serene in its cycle of violence and reproduction.  But now the stars have started to streak again, and very old things in the valley have started to glow with eldritch colors.  
 
+The dust will soon fall once more, and the dragons stir as ancient species-memories churn in their lizard brains.  The call to grow, to change...  to fight.
+
+`$Continue` => {
+    go to cg3
+}
+@cg3
 Pick a Species:
 <ul class="actions">
 `*Mist Dragon` => {
-    'You are a mist dragon' the end
+    load cg\mist
+    go to cg-mist
 }
 `*Prismatic Dragon` => {
-    'You are a prismatic dragon' the end
+    load cg\prismatic
+    go to cg-prismatic
 }
 `*Swarm Host` => {
-    'You are a swarm host' the end
+    load cg\host
+    go to cg-host
 }
 </ul>

@@ -1,0 +1,6 @@
+@cg-host
+You will be a swarm host.
+{
+    start host
+    "It Begins!" game over
+}

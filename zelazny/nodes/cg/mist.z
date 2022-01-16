@@ -1,0 +1,6 @@
+@cg-mist
+You will be a mist dragon.
+{
+    start mist
+    "It Begins!" game over
+}
