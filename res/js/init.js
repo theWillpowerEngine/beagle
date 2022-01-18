@@ -41,9 +41,7 @@ $(async () => {
     }
 
     setTimeout(async () => {
-        //ui.modal("Welcome to the game", () => {console.log("good")})
         await ui.zelazny("hello")
-    
     }, 250)
 
 })

@@ -2,6 +2,7 @@ const Color = require('color')
 const { ipcRenderer } = require("electron")
 const makePlayer = require("@eng/player")
 const makeZelazny = require("zelazny")
+const makeRenderer = require("@render/renderer")
 const fs = require('fs')
 
 module.exports = () => {
@@ -27,8 +28,32 @@ module.exports = () => {
     }
 
     let engine = {
-        zelazny: null,
+        config: {
+            mapSize: 8
+        },
+        
         player: null,
+        renderer: null,
+        zelazny: null,
+
+        tiles: [],
+        items: [],
+        mobs: [],
+
+        _objects = null,
+        objects(clear) {
+            if(clear)
+                engine._objects = null
+
+            if(engine._objects == null)
+                engine._objects = [
+                    engine.player,
+                    ...engine.items,
+                    ...engine.mobs
+                ]
+
+            return engine._objects
+        },
 
         async getZelazny(group, node) {
             if(node)
@@ -37,9 +62,15 @@ module.exports = () => {
                 return await ipcRenderer.invoke("zelazny", group)
         },
 
-        async init() {
+        async init(cfg) {
+            engine.config = {
+                ...engine.config,
+                ...cfg
+            }
+
             engine.zelazny = makeZelazny(engine, {}, getZelaznyConfigObject(engine))
             engine.player = makePlayer(engine)
+            engine.renderer = makeRenderer(engine)
         }
     }
 
