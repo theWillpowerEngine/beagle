@@ -4,6 +4,7 @@ const makePlayer = require("@eng/player")
 const makeZelazny = require("zelazny")
 const makeRenderer = require("@render/renderer")
 const fs = require('fs')
+const terrainGen = require("@eng/gens/terrain")
 
 module.exports = () => {
 
@@ -29,18 +30,20 @@ module.exports = () => {
 
     let engine = {
         config: {
-            mapSize: 8
+            mapSize: 4,
+            tileSize: 10,
         },
+        gameOver: false,
         
         player: null,
         renderer: null,
         zelazny: null,
 
-        tiles: [],
+        terrain: [],
         items: [],
         mobs: [],
 
-        _objects = null,
+        _objects: null,
         objects(clear) {
             if(clear)
                 engine._objects = null
@@ -62,6 +65,14 @@ module.exports = () => {
                 return await ipcRenderer.invoke("zelazny", group)
         },
 
+        startUp: {
+            makeWorld() {
+                engine.terrain = terrainGen(engine)
+                engine.renderer.height = engine.terrain.length
+                engine.renderer.width = engine.terrain.length
+            }
+        },
+
         async init(cfg) {
             engine.config = {
                 ...engine.config,
@@ -71,6 +82,15 @@ module.exports = () => {
             engine.zelazny = makeZelazny(engine, {}, getZelaznyConfigObject(engine))
             engine.player = makePlayer(engine)
             engine.renderer = makeRenderer(engine)
+        },
+
+        ticks: 0,
+        async tick() {
+            engine.ticks += 1
+            if(that.gameOver)
+                throw that.gameOver
+
+            
         }
     }
 

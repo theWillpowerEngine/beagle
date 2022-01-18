@@ -11,15 +11,22 @@ window.onerror = async function(msg, url, line, col, error) {
     return false
 }
 
+function startGame() {
+    game.startUp.makeWorld()
+}
+
 window["starts"] = {
     "Prismatic Dragon": eng => {
         game.player.species = species.prismatic
+        startGame()
     },
     "Swarm Host": eng => {
         game.player.species = species.host
+        startGame()
     },
     "Mist Dragon": eng => {
         game.player.species = species.mist
+        startGame()
     },
 }
 
@@ -33,11 +40,11 @@ $(async () => {
 
     await game.init()
     game.zelazny.macros["start"] = pop => {
-        try {
+        //try {
             doStart(species[pop()])
-        } catch (ex) {
-            console.error(`Could not start: ` + ex)
-        }
+        //} catch (ex) {
+        //    console.error(`Could not start: ` + ex)
+        //}
     }
 
     setTimeout(async () => {

@@ -53,4 +53,17 @@ const ui = {
             ui.inZelazny = false
         })
     },
+
+    async drawFrame() {
+        //await game.tick()
+
+        new Canvas('game', 0, function() {
+            // Clear the canvas
+            this.clear();
+    
+            // Fill a string at given xy-coordinates
+            this.fillText('Hello World! This is html canvas library ' + this.getVersion(), 20, 20);
+        });
+
+    }
 }

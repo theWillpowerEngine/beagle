@@ -25,6 +25,11 @@ body{
     font-size: 13pt;
 }
 
+#game {
+    height: 100%;
+    width: 100%;
+}
+
 /*  Zelazny styles   */
 .action-link {
     color: #006D77;

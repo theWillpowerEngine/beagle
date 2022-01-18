@@ -3,6 +3,8 @@ const xpCumulativeCosts = [1, 3, 7, 15, 27, 40, 55, 70, 90, 110]
 
 module.exports = (engine) => {
     var player = {
+        x: 100, y: 100,
+        
         zelaznyAttrs: {
             test: 0,
         },
