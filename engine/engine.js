@@ -13,7 +13,7 @@ module.exports = () => {
             macros: {
                 load(pop, expect) {
                     try {
-                        var content = fs.readFileSync(`zelazny\\nodes\\${pop()}.z`, 'utf8')
+                        var content = fs.readFileSync(`zelazny/nodes/${pop()}.z`, 'utf8')
                         eng.zelazny.parse(content, true)
                     } catch (ex) {
                         console.error(`Bad attempt to load zelazny: ` + ex)
@@ -60,7 +60,7 @@ module.exports = () => {
 
         async getZelazny(group, node) {
             if(node)
-                return await ipcRenderer.invoke("zelazny", group + "\\" + node)
+                return await ipcRenderer.invoke("zelazny", group + "/" + node)
             else
                 return await ipcRenderer.invoke("zelazny", group)
         },

@@ -21,15 +21,15 @@ The dust will soon fall once more, and the dragons stir as ancient species-memor
 Pick a Species:
 <ul class="actions">
 `*Mist Dragon` => {
-    load cg\mist
+    load cg/mist
     go to cg-mist
 }
 `*Prismatic Dragon` => {
-    load cg\prismatic
+    load cg/prismatic
     go to cg-prismatic
 }
 `*Swarm Host` => {
-    load cg\host
+    load cg/host
     go to cg-host
 }
 </ul>
